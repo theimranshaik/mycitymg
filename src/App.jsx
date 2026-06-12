@@ -262,7 +262,7 @@ function StateList({
       {states.map((state) => (
         <div key={state.id} className="state-item">
           <div className="state-header">
-            <h4{state.name}</h4>
+            <h4>{state.name}</h4>
             <div className="action-buttons">
               <button
                 className="btn btn-secondary btn-xs"
