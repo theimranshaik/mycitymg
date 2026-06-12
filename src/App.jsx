@@ -161,10 +161,10 @@ export default function App() {
   return (
     <div className="app-container">
       <header className="app-header">
-        <h1>📍 Location Management System</h1>
+        <h1>Location Management System</h1>
         <p>Manage global organizational locations hierarchically</p>
         <button className="btn btn-primary add-country-btn" onClick={handleAddCountry}>
-          ➕ Add New Country
+          Add New Country
         </button>
       </header>
 
@@ -207,19 +207,19 @@ function CountryList({
       {countries.map((country) => (
         <div key={country.id} className="card country-card">
           <div className="card-header country-header">
-            <h2>🌍 {country.name}</h2>
+            <h2>{country.name}</h2>
             <div className="action-buttons">
               <button
                 className="btn btn-secondary btn-sm"
                 onClick={() => onEditCountry(country.id, country.name)}
               >
-                ✏️ Edit
+                Edit
               </button>
               <button
                 className="btn btn-danger btn-sm"
                 onClick={() => onDeleteCountry(country.id, country.name)}
               >
-                🗑️ Delete
+                Delete
               </button>
             </div>
           </div>
@@ -227,7 +227,7 @@ function CountryList({
             <div className="section-title-wrapper">
               <h3>States Management</h3>
               <button className="btn btn-success btn-xs" onClick={() => onAddState(country.id)}>
-                ➕ Add State
+                Add State
               </button>
             </div>
             <StateList
@@ -262,22 +262,22 @@ function StateList({
       {states.map((state) => (
         <div key={state.id} className="state-item">
           <div className="state-header">
-            <h4>🏛️ {state.name}</h4>
+            <h4{state.name}</h4>
             <div className="action-buttons">
               <button
                 className="btn btn-secondary btn-xs"
                 onClick={() => onEditState(countryId, state.id, state.name)}
               >
-                ✏️ Edit
+                Edit
               </button>
               <button
                 className="btn btn-danger btn-xs"
                 onClick={() => onDeleteState(countryId, state.id, state.name)}
               >
-                🗑️ Delete
+                Delete
               </button>
               <button className="btn btn-primary btn-xs" onClick={() => onAddCity(countryId, state.id)}>
-                🏙️ Add City
+                Add City
               </button>
             </div>
           </div>
